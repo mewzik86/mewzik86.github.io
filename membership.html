@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wing Dings - Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="Content/StyleSheet.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Wing Dings</a>
+            <!-- insert circular image logo -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estimate.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="form">
+        <form id="register" action="mailto:jdoe114@my.cennialcollege.ca" method="post">
+            <fieldset id="fsName" class="form-group">
+                <div class="errorMsg"></div>
+                <legend>Name: </legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="txtFirstName">First Name:</label>
+                        <input id="txtFirstName" name="txtFirstName" size="25" tabindex="1" type="text" autofocus="autofocus"></div>
+                    <div class="col">
+                        <label for="txtLastName">Last Name:</label>
+                        <input id="txtLastName" name="txtLastName" size="25" tabindex="1" type="text" autofocus="autofocus"></div>
+                </div>
+            </fieldset>
+            <fieldset id="fsPersonal" class="form-group">
+                <legend>Personal Info: </legend>
+                <div class="errorMsg"></div>
+                <label for="txtStreet">Street:</label>
+                <input id="txtStreet" name="txtStreet" size="25" tabindex="1" type="text" autofocus="autofocus">
+                <br><label for="txtCity">City:</label>
+                <input id="txtCity" name="txtCity" size="30" tabindex="5" type="text" placeholder="city">
+                <br><label for="txtPostal">Postal Code:</label>
+                <input id="txtPostal" name="txtPostal" size="6" tabindex="7" type="text" placeholder="*** ***">
+                <br><label for="selProvince">Province</label>
+                <select id="selProvince" name="selProvince" placeholder="**">
+                    <option value="AL">AL</option>
+                    <option value="AB">AB</option>
+                    <option value="BC">BC</option>
+                    <option value="MB">MB</option>
+                    <option value="NB">NB</option>
+                    <option value="NL">NL</option>
+                    <option value="NS">NS</option>
+                    <option value="NT">NT</option>
+                    <option value="NU">NU</option>
+                    <option value="ON">ON</option>
+                    <option value="PE">PE</option>
+                    <option value="QC">QC</option>
+                    <option value="SK">SK</option>
+                    <option value="YT">YT</option>
+                </select>
+                <br><label for="selProvince">Age: </label>
+                <select id="selAge" name="selAge">
+                </select>
+            </fieldset>
+            <fieldset id="fsAccount" class="form-group">
+                <legend>Account Information: </legend>
+                <div class="errorMsg"></div>
+                <div class="row">
+                    <div class="col">
+                        <label for="txtEmail">Email</label>
+                        <br><input id="txtEmail" name="txtEmail" size="25" tabindex="1" type="email" placeholder="myAccount@gmail.com"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="txtPassword">Password</label>
+                        <br><input id="txtPassword" name="txtPassword" size="25" tabindex="1" type="password"></div>
+                    <div class="col">
+                        <label for="txtPassConfirm">Confirm Password</label>
+                        <br><input id="txtPassConfirm" name="txtPassConfirm" size="25" tabindex="1" type="password"></div>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <input id="btnSubmit" name="btnSubmit" class="btn btn-primary" type="button" value="Register" onclick="ValidatePage()">
+                <input id="btnReset" name="btnReset" class="btn btn-secondary" type="button" value="Start Again" onclick="StartupPage()">
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/membership.js"></script>
+</body>
