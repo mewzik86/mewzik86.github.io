@@ -23,10 +23,22 @@ function PopulateOptions() {
     }
 }
 
+function CalculateIndex() {
+    uniqueIndex = 1;
+    for (var i = 0; i < document.forms[0].elements.length; i++) {
+        if ((document.forms[0].elements[i].tagName == "INPUT") || (document.forms[0].elements[i].tagName == "SELECT"))
+        {
+            document.forms[0].elements[i].tabIndex = uniqueIndex;
+        }
+        uniqueIndex++; //increment idex so each field has a unique number
+    }
+}
+
 // clear form
 function ClearForm() {
     var allInput = document.getElementsByTagName("input");
     var allSelect = document.getElementsByTagName("select");
+    CalculateIndex();
     ClearValidity(nameFieldset);
     ClearValidity(personalFieldset);
     ClearValidity(accountFieldset);
