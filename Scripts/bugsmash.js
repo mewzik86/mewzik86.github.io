@@ -36,7 +36,7 @@ function ResetGame() {
 function randPercent() {
     var rand = ((Math.random()*1000000)%100).toFixed(0);
     rand /= 100;
-    console.log(rand);
+    //console.log(rand);
     return rand;
 }
 

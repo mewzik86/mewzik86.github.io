@@ -10,8 +10,8 @@ var allFoods = ["Fries", "Sweet Potato Fries", "Wedges", "Fried Onion Rings", "F
     "Red Wine", "White Wine", "Blood Orange Bellini", "Bourbon Witch", "Margarita",
     "Passion Peach", "Aperol Spritz", "Budweiser", "Heineken", "Coors Light", "Barbeque Wings",
     "Baked Wings", "Fried Wings"];
-var allCustomers = ["Bruce Wayne", "Alfred Pennyworth", "Clark Kent",
-"Peter Parker", "John Snow", "Jack Sparrow", "Marty Byrd", "Bugs Bunny", "Tony Stark"];
+var allCustomers = ["Bruce Wayne", "Alfred Pennyworth", "Lois Lane",
+"Peter Parker", "John Snow", "Jack Sparrow", "Marty Byrd", "Mary Jane", "Tony Stark", "Tori Anderson"];
 var dineChoice = ["Take Out", "Dine-In"];
 
 

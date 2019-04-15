@@ -75,26 +75,17 @@
             <div class="col-lg-9">
 
                 <div class="row">
-                    <div id="lrgImage" class="col-7">
-                        <img>
+                    <div id="largeImageCtn" class="col-9">
+                        <img id="largeImage">
+                        <div id="prev_btn"><img src="/Images/arrow_p.png" class="prev_img"></div>
+                        <div id="next_btn"><img src="/Images/arrow_n.png" class="next_img"></div>
                         <div id="zoomButtons">
                             <p>
-                                <button id="zoom">Zoom</button>
-                                <button id="close">Close</button></p>
+                                <button id="zoom" class="btn btn-primary">Zoom</button>
+                                <button id="close" class="btn btn-primary">Close</button>
+                                <button id="load" class="btn btn-primary" onclick="LoadFile()">Load</button>
+                            </p>
                         </div>
-                    </div>
-                    <div id="smlImages" class="col-5">
-                        <ul>
-                            <li><img></li>
-                            <li><img></li>
-                        </ul>
-                        <ul>
-                            <li><img></li>
-                            <li><img></li>
-                        </ul>
-                        <ul>
-                            <li><img></li>
-                        </ul>
                     </div>
                 </div>
                 <!-- row -->
@@ -121,6 +112,10 @@
     <script src="Scripts/jquery.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/gallery.js"></script>
+    
+    <script>
+
+    </script>
 
 </body>
 

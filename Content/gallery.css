@@ -1,8 +1,8 @@
-#lrgImage {
+#largeImageCtn {
     margin-top: 20px;
 }
 
-#lrgImage img {
+#largeImage {
     box-shadow: 3px 3px 5px rgb(19, 6, 0);
 	border-radius: 10px;
     border-style: none;
@@ -20,21 +20,21 @@
     text-align: center;
 }
 
-#smlImages {
+#smallImages {
     margin-top: 20px;
     float: left;
 }
-#smlImages ul {
+#smallImages ul {
     list-style-type: none;
     margin-top: 20px;
     padding-left: 0px;
 }
-#smlImages li {
+#smallImages li {
     display: inline;
     margin-left: 6px;
     margin-right: 6px;
 }
-#smlImages img {
+#smallImages img {
 	box-shadow: 3px 3px 5px rgb(19, 6, 0);
 	border-radius: 10px;
     border-style: none;
@@ -43,7 +43,30 @@
     object-fit: cover;
 	transition: all .2s;
 }
-#smlImages img:hover {
+#smallImages img:hover {
 	transform: scale(1.2);
 	border: medium solid #ffa550;
+}
+
+#prev_btn,
+#next_btn {
+    position: absolute;
+    width: 30px;
+    left: 15px;
+    top: 125px;
+    display: flex;
+}
+
+#next_btn {
+    right:15px;
+    left: auto;
+}
+
+.prev_img,
+.next_img {
+    transition: all .2s;
+}
+.prev_img:hover,
+.next_img:hover {
+    transform: scale(2);
 }

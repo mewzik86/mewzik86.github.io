@@ -1,20 +1,69 @@
 
 // declare global variables
-var largeImage = document.getElementById("lrgImage").getElementsByTagName("img")[0];
-var smallImages = document.getElementById("smlImages").getElementsByTagName("img");
+var largeImage = document.getElementById("largeImage");
+var fileList = ["wings1-large.jpg", "wings2-large.jpg", "wings3-large.jpg", "wings4-large.jpg", "wings5-large.jpg"];
+var photoTimer = setInterval(ShowNextPhoto, 5000);
+var interactTimeout;
+var count = 0;
 
-function MakePhotoGallery() {
-    //assign initial larger photo
-    largeImage.src = "Images/wings1-large.jpg";
-    //assign smaller photos
-    for (var i = 0; i < smallImages.length; i++) {
-        smallImages[i].src = "Images/wings" + (i + 1) + "-large.jpg";
+function LoadFile() {
+    alert("loading file");
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = CheckPageReady();
+    xhttp.open("GET", "photo_list.txt", true);
+    xhttp.send();
+    alert(xhttp.status);
+}
+function CheckPageReady() {
+    if (this.readyState == 4 && this.status == 200) {
+        fileList = this.responseText;
+        alert(this.responseText);
     }
 }
 
-function FocusOnPhoto(clickedImg) {
-    largeImage.src = clickedImg.target.src;
+function StartPhotoTimer() {
+    photoTimer = setInterval(ShowNextPhoto, 5000);
 }
+
+function PressNextPhoto() {
+    clearInterval(photoTimer);
+    clearTimeout (interactTimeout);
+    interactTimeout = setTimeout(StartPhotoTimer, 10000);
+    ShowNextPhoto();
+}
+function PressPrevPhoto() {
+    clearInterval(photoTimer);
+    clearTimeout (interactTimeout);
+    interactTimeout = setTimeout(StartPhotoTimer, 10000);
+    ShowPrevPhoto();
+}
+
+function ShowNextPhoto() {
+    //assign initial larger photo
+    if(count == (fileList.length)){
+        count = 1;
+    }
+    else {
+        count++;
+    }
+    largeImage.src = "Images/wings" + count + "-large.jpg";
+    $("#largeImage").animate({opacity: 1});
+}
+function ShowPrevPhoto() {
+    //assign initial larger photo
+    if(count == 1){
+        count = (fileList.length);
+    }
+    else {
+        count--;
+    }
+    largeImage.src = "Images/wings" + count + "-large.jpg";
+}
+$("#next_btn").click(function(){
+    $("#largeImage").animate({opacity: 0});
+    PressNextPhoto();
+  });
+
 function Zoom() {
     viewwin = window.open(largeImage.src, 'viewwin', 'width=600, height=300');
 }
@@ -23,16 +72,21 @@ function Close() {
 }
 
 function CreateEventListeners() {
+    var nextBtn = document.getElementById("next_btn");
+    var prevBtn = document.getElementById("prev_btn");
 
-    if (smallImages[0].addEventListener) {
-        for (var i = 0; i < smallImages.length; i++) {
-            smallImages[i].addEventListener("click", FocusOnPhoto, false);
-        }
+    // if (nextBtn.addEventListener) {
+    //     nextBtn.addEventListener("click", PressNextPhoto, false);
+    // }
+    // else if (nextBtn.attachEvent) {
+    //     nextBtn.attachEvent("onclick", PressNextPhoto);
+    // }
+
+    if (prevBtn.addEventListener) {
+        prevBtn.addEventListener("click", PressPrevPhoto, false);
     }
-    else if (smallImages[0].attachEvent) {
-        for (var i = 0; i < smallImages.length; i++) {
-            smallImages[i].attachEvent("onclick", FocusOnPhoto);
-        }
+    else if (prevBtn.attachEvent) {
+        prevBtn.attachEvent("onclick", PressPrevPhoto);
     }
     
     var zoomButton = document.getElementById("zoom");
@@ -53,7 +107,7 @@ function CreateEventListeners() {
 
 function SetUpPage() {
     CreateEventListeners();
-    MakePhotoGallery();
+    ShowNextPhoto();
 }
 
 if (window.addEventListener) {
