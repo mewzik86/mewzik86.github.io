@@ -1,0 +1,102 @@
+body {
+    background-image: url(/content/images/code.png);
+    background-color: tan;
+    background-repeat: repeat;
+}
+
+.my-bg-dark {
+    background-color: #404040;
+}
+
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+    margin-bottom: -75px;
+    border: solid;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 50%;
+    padding: -10px;
+    box-shadow: 0px 10px 10px #404040;
+    filter: grayscale(100%);
+    transition-duration: 1.2s;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px orangered;
+    filter: grayscale(0%);
+}
+
+#myTitle {
+    display: flex;
+    text-align: center;
+}
+
+#aboutMeContainer {
+    display: flex;
+    width: 980px;
+    height: 400px;
+    margin: 10px auto 0px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#aboutMePrompt {
+    display: none;
+    flex-direction: row;
+    background-color: black;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(83, 73, 56);
+}
+
+.line {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 150%;
+    font-weight: bold;
+    display: inline;
+}
+
+.myCursor {
+    width: 10px;
+    height: 20px;
+    animation: blinkCursor 500ms steps(1, end) infinite;
+    background-color: white;
+    margin: 0px 0px -2px;
+    display: inline-block;
+}
+
+@keyframes blinkCursor {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+#aboutMeInfoCont {
+    width: 970px;
+    height: 77vh;
+    border-radius: 15px;
+    background-color: rgb(238, 228, 215);
+    box-shadow: 5px 5px 5px rgb(83, 73, 56);
+    position: absolute;
+    margin-top: 20px;
+    padding: 60px 10px;
+    z-index: -1;
+}
+
+#aboutMeInfo {
+    display: none;
+    padding: 10px;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
