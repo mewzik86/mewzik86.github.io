@@ -9,7 +9,8 @@ body {
 }
 
 .navbar-brand img {
-    width: 200px;
+    width: 15vw;
+    min-width: 100px;
     height: auto;
     margin-bottom: -75px;
     border: solid;
@@ -33,9 +34,18 @@ body {
     text-align: center;
 }
 
+#myTitle h1 {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+#myTitle h2 {
+    font-size: 3vw;
+}
+
 #aboutMeContainer {
     display: flex;
-    width: 980px;
+    width: 60vw;
     height: 400px;
     margin: 10px auto 0px;
     justify-content: center;
@@ -81,22 +91,30 @@ body {
 }
 
 #aboutMeInfoCont {
-    width: 970px;
-    height: 77vh;
+    width: 60vw;
+    height: auto;
     border-radius: 15px;
     background-color: rgb(238, 228, 215);
     box-shadow: 5px 5px 5px rgb(83, 73, 56);
     position: absolute;
     margin-top: 20px;
-    padding: 60px 10px;
+    padding: 60px 20px;
     z-index: -1;
 }
 
 #aboutMeInfo {
     display: none;
-    padding: 10px;
     font-size: 150%;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #aboutMeInfoCont {
+        width: 100vw;
+    }
+    #aboutMeInfo {
+        font-size: 5vw;
+    }
 }
