@@ -22,10 +22,12 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark my-bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Wing Dings</a>
-            <!-- insert circular image logo -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -97,11 +99,15 @@
 
             <div class="col-lg-9">
 
-                <div class="row">
+                <div id="galleryContainer" class="row">
                     <div id="largeImageCtn" class="col-9">
                         <img id="largeImage">
-                        <div id="prev_btn"><img src="/Images/arrow_p.png" class="prev_img"></div>
-                        <div id="next_btn"><img src="/Images/arrow_n.png" class="next_img"></div>
+                        <div id="prev_btn">
+                            <img src="./Images/arrow_p.png" class="prev_img">
+                        </div>
+                        <div id="next_btn">
+                            <img src="./Images/arrow_n.png" class="next_img">
+                        </div>
                         <div id="zoomButtons">
                             <p>
                                 <button id="zoom" class="btn btn-primary">Zoom</button>
@@ -123,11 +129,11 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 my-bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">&copy;&nbsp;Copyright Daison Hollingsworth</p>
             <p class="m-0 text-center text-white">
-                <a href="references.html">References</a> | 
+                <a href="references.html">References</a> |
                 <a href="http://mewzik86.github.io">Home</a>
             </p>
         </div>
@@ -138,9 +144,8 @@
     <script src="Scripts/jquery.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/gallery.js"></script>
-    
-    <script>
 
+    <script>
     </script>
 
 </body>

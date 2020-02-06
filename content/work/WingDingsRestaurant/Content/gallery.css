@@ -1,10 +1,14 @@
+#galleryContainer {
+    justify-content: center;
+}
+
 #largeImageCtn {
     margin-top: 20px;
 }
 
 #largeImage {
     box-shadow: 3px 3px 5px rgb(19, 6, 0);
-	border-radius: 10px;
+    border-radius: 10px;
     border-style: none;
     width: 100%;
     height: 300px;
@@ -16,7 +20,8 @@
     width: 100%;
     height: auto;
 }
-#zoomButtons p{
+
+#zoomButtons p {
     text-align: center;
 }
 
@@ -24,49 +29,56 @@
     margin-top: 20px;
     float: left;
 }
+
 #smallImages ul {
     list-style-type: none;
     margin-top: 20px;
     padding-left: 0px;
 }
+
 #smallImages li {
     display: inline;
     margin-left: 6px;
     margin-right: 6px;
 }
+
 #smallImages img {
-	box-shadow: 3px 3px 5px rgb(19, 6, 0);
-	border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(19, 6, 0);
+    border-radius: 10px;
     border-style: none;
     width: 125px;
     height: 70px;
     object-fit: cover;
-	transition: all .2s;
+    transition: all .2s;
 }
+
 #smallImages img:hover {
-	transform: scale(1.2);
-	border: medium solid #ffa550;
+    transform: scale(1.2);
+    border: medium solid #ffa550;
 }
 
 #prev_btn,
 #next_btn {
     position: absolute;
-    width: 30px;
-    left: 15px;
+    width: 50px;
     top: 125px;
-    display: flex;
+    /*display: flex;*/
+}
+
+#prev_btn {
+    left: 0;
 }
 
 #next_btn {
-    right:15px;
-    left: auto;
+    right: 0;
 }
 
 .prev_img,
 .next_img {
     transition: all .2s;
 }
+
 .prev_img:hover,
 .next_img:hover {
-    transform: scale(2);
+    transform: scale(1.5);
 }
