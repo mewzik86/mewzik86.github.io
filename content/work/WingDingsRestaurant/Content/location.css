@@ -1,0 +1,56 @@
+ /* main content */
+ article {
+    width: 100%;
+    text-align: center;
+    background: ivory;
+    overflow: auto;
+ }
+ 
+ h2 {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+ }
+ 
+ #cities {
+    overflow: auto;
+    display:inline-block;
+ }
+ 
+ #cities div {
+    height: 2em;
+    text-align: center;
+    float: left;
+    line-height: 2em;
+    margin: 0 0.25em;
+    background: black;
+    color: white;
+    padding: 0 1em;
+    cursor: default;
+ }
+ 
+ #caption {
+    text-align: center;
+    width: 100%;
+    float: left;
+    clear: left;
+    margin: 0.5em 0;
+    font-weight: bold;
+ }
+ 
+ #map {
+
+    min-height: 400px;
+    width: 100%;
+    float: left;
+    clear: left;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px #333333;
+ }
+ 
+ @media all and (max-width: 500px) {
+    h1 {
+       font-size: 24px;
+    }
+ }

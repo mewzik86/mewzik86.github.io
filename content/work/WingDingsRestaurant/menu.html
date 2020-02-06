@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wing Dings - Menu</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="Content/StyleSheet.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Wing Dings</a>
+            <!-- insert circular image logo -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Menu
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estimate.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="membership.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-3">
+
+                <h1 class="my-4">Menu</h1>
+                <div id="accordion" class="side-menu">
+                    <div id="wingsCard" class="card-header side-menu-item-active menu-top">
+                        <a href="#menu-wings" class="">Wings</a>
+                    </div>
+                    <div id="sidesCard" class="card-header side-menu-item-active">
+                        <a href="#menu-sides" class="">Sides</a>
+                    </div>
+                    <div id="drinksCard" class="card-header side-menu-item-active">
+                        <a href="#menu-drinks" class="">Drinks</a>
+                    </div>
+                    <div id="galleryCard" class="card-header side-menu-item">
+                        <a href="gallery.html" class="">Food Gallery</a>
+                    </div>
+                    <div id="calendarCard" class="card-header side-menu-item">
+                        <a href="calendar.html" class="">Calendar</a>
+                    </div>
+                    <div id="funCard" class="card-header side-menu-item">
+                        <a href="#funStuff" data-toggle="collapse" aria-expanded="false" aria-controls="funStuff">Fun & Games!</a>
+                    </div>
+                    <div id="funStuff" class="collapse" data-parent="#accordion">
+                        <div id="puzzleCard" class="card-body">
+                            <a href="puzzle.html" class="">Create-A-Meal</a>
+                        </div>
+                        <div id="bugCard" class="card-body side-menu-item">
+                            <a href="bugsmash.html" class="">Catch-A-Bug</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-3 -->
+
+            <div class="col-lg-9">
+
+                <div class="row">
+                    <div class="descriptions">
+                        <script>
+                            //initialize variables
+                            var wingItems = ["<b>Barbeque Wings</b>", "<b>Baked Wings</b>", "<b>Fried Wings</b>", "<b>Sauces:</b><br/>Ranch, Sweet & Sour, Lemon Spice,<br/>Buffalo, Hot!, Suicide!"];
+                            var wingCosts = [9.99, 9.99, 8.99, .99];
+                            var sideItems = ["Fries", "Sweet Potato Fries", "Wedges", "Fried Onion Rings", "Fresh Celery & Carrot Strips"];
+                            var sideCosts = [5.99, 6.99, 6.99, 5.99, 7.99];
+                            var drinkItems = ["Red Wine", "White Wine", "Blood Orange Bellini", "Bourbon Witch", "Margarita", "Passion Peach", "Aperol Spritz", "Budweiser", "Heineken", "Coors Light"];
+                            var drinkCosts = [10.99, 11.99, 8.99, 7.99, 7.99, 8.99, 6.99, 4.99, 5.99, 3.99];
+                        </script>
+
+                        <div class="menu-block">
+                            <h2 id="menu-wings">Wings</h2>
+                            <table class="menu-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tb-odd">
+                                        <td>
+                                            <script>
+                                                document.write(wingItems[0]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(wingCosts[0]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-even">
+                                        <td>
+                                            <script>
+                                                document.write(wingItems[1]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(wingCosts[1]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-odd">
+                                        <td>
+                                            <script>
+                                                document.write(wingItems[2]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(wingCosts[2]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-even">
+                                        <td>
+                                            <script>
+                                                document.write(wingItems[3]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(wingCosts[3]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="menu-block">
+                            <h2 id="menu-sides">Sides</h2>
+                            <table class="menu-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tb-odd">
+                                        <td>
+                                            <script>
+                                                document.write(sideItems[0]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(sideCosts[0]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-even">
+                                        <td>
+                                            <script>
+                                                document.write(sideItems[1]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(sideCosts[1]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-odd">
+                                        <td>
+                                            <script>
+                                                document.write(sideItems[2]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(sideCosts[2]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-even">
+                                        <td>
+                                            <script>
+                                                document.write(sideItems[3]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(sideCosts[3]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-odd">
+                                        <td>
+                                            <script>
+                                                document.write(sideItems[4]);
+                                            </script>
+                                        </td>
+                                        <td>
+                                            <script>
+                                                document.write(sideCosts[4]);
+                                            </script>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <h2 id="menu-drinks">Drinks</h2>
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tb-odd">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[0]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[0]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-even">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[1]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[1]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-odd">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[2]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[2]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-even">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[3]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[3]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-odd">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[4]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[4]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-odd">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[5]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[5]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-even">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[6]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[6]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-odd">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[7]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[7]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-even">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[8]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[8]);
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr class="tb-odd">
+                                    <td>
+                                        <script>
+                                            document.write(drinkItems[9]);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            document.write(drinkCosts[9]);
+                                        </script>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                    </div>
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">&copy;&nbsp;Copyright Daison Hollingsworth</p>
+            <p class="m-0 text-center text-white">
+                <a href="references.html">References</a> | 
+                <a href="http://mewzik86.github.io">Home</a>
+            </p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+</body>
+
+</html>

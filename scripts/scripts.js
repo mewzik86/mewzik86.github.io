@@ -1,5 +1,4 @@
 //################  GLOBAL VARIABLES  ###################
-//let test = $("#aboutMeContainer").offset().top;
 
 const aboutMe = {
     objectT: 0,
@@ -39,7 +38,6 @@ function promptAnim(section, command) {
     $("#" + section + "Prompt").slideDown("slow");
     $("#" + section + "Command").text("# ");
     setTimeout(function() { typeWriter(section, command, 0) }, 500);
-    //setTimeout(function() { $("#" + section + "Prompt").slideUp("slow"); }, 1500);
     setTimeout(function() { $("#" + section + "Content").slideDown("slow"); }, 1700);
 }
 
@@ -60,15 +58,6 @@ $(window).scroll(function() {
     extra.objectH = $("#extraContainer").height();
     extra.objectB = extra.objectT + extra.objectH;
 
-    console.log("displayT: " + displayT);
-    console.log("displayB: " + displayB);
-    console.log("aboutT: " + aboutMe.objectT);
-    console.log("aboutT: " + aboutMe.objectB);
-    console.log("myWorkT: " + myWork.objectT);
-    console.log("myWorkB: " + myWork.objectB);
-    console.log("extraT: " + extra.objectT);
-    console.log("extraB: " + extra.objectB);
-
     aboutMe.inView = (aboutMe.objectT > displayT) && ((aboutMe.objectT + 60) < displayB);
     aboutMe.fullView = (aboutMe.objectT > displayT) && (aboutMe.objectB < displayB);
     myWork.inView = (myWork.objectT > displayT) && ((myWork.objectT + 60) < displayB);
@@ -77,8 +66,6 @@ $(window).scroll(function() {
     extra.fullView = (extra.objectT > displayT) && (extra.objectB < displayB);
 
     if (aboutMe.inView || aboutMe.fullView) {
-        //console.log("about.inView: " + aboutMe.inView);
-        //console.log("about.fullView: " + aboutMe.fullView);
         if (!aboutMe.shown) {
             promptAnim("aboutMe", "whoami");
             aboutMe.shown = true;
@@ -89,10 +76,6 @@ $(window).scroll(function() {
     }
 
     if (myWork.inView || myWork.fullView) {
-        console.log("myWorkB: " + myWork.objectB);
-        console.log("myWorkT: " + myWork.objectT);
-        console.log("displayT: " + displayT);
-        console.log("displayB: " + displayB);
         if (!myWork.shown) {
             promptAnim("myWork", "ls -a *projects");
             myWork.shown = true;
@@ -103,8 +86,6 @@ $(window).scroll(function() {
     }
 
     if (extra.inView || extra.fullView) {
-        //console.log("extra.inView: " + extra.inView);
-        //console.log("extra.fullView: " + extra.fullView);
         if (!extra.shown) {
             promptAnim("extra", "Daison --help | grep extras");
             extra.shown = true;
